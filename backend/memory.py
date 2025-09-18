@@ -1,8 +1,9 @@
 import os, json
 from typing import List, Tuple
+
 from langchain_openai import OpenAIEmbeddings
-from langchain.schema import Document
-from langchain.vectorstores import Chroma
+from langchain_core.documents import Document
+from langchain_community.vectorstores import Chroma
 from redis import Redis
 
 CHROMA_DIR = os.getenv("CHROMA_DIR","./.chroma")
